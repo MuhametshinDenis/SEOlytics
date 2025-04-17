@@ -1,0 +1,11 @@
+*.pyc
+/.venv
+.env
+
+app/__pycache__
+app/core/__pycache__
+app/reports/__pycache__
+app/utils/logger/__pycache__
+
+package-lock.json
+/node_modules

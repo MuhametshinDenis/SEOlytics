@@ -1,0 +1,17 @@
+{
+  "name": "SEOlytics",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app/node/run-analyze.js"
+  },
+  "author": "Denis M <denism0709@gmail.com>",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chrome-launcher": "^1.1.2",
+    "lighthouse": "^12.5.1"
+  }
+}
