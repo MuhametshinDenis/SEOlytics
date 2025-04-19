@@ -8,7 +8,7 @@ from InquirerPy import inquirer
 from app.core.analyze_reports import analyze_reports
 from app.reports.html_report import generate_html_report
 from app.reports.xlsx_report import generate_xlsx_report
-from app.scheduled_runner import run_weekly_report
+from app.scheduled_runner import run_daily_report
 from app.utils.logger.application_logger import ApplicationLogger
 
 
@@ -27,10 +27,12 @@ def main():
 	).execute()
 
 	if (operating_mode == "regular"):
-		run_weekly_report()
+		run_daily_report()
+
+		task_run_time = input("Введите время запуска программы, например, 12:10:00 или 09:02:00: ")
 
 		logger.success("Ежедневный запуск установлен!")
-		schedule.every().day.at("12:12:00").do(run_weekly_report)
+		schedule.every().day.at(task_run_time).do(run_daily_report)
 
 		while True:
 			schedule.run_pending()

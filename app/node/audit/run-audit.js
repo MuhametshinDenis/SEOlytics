@@ -2,6 +2,16 @@ import * as chromeLauncher from "chrome-launcher";
 import lighthouse from "lighthouse";
 import config from "../config/lighthouse.config.js";
 
+/**
+Функция выполняет аудит страницы с помощью Lighthouse и возвращает результаты.
+  - Запускает Chrome в режиме headless с использованием chrome-launcher.
+  - Настроены параметры аудита, включая уровень логирования, формат вывода (json) и порт для подключения к Chrome.
+  - Выполняет аудит страницы через Lighthouse, используя переданный URL и настройки из конфигурации.
+  - Извлекает ключевые данные из результатов аудита, включая показатели по производительности, SEO, доступности, безопасности (SSL) и HTTP статусу.
+  - Закрывает Chrome после завершения аудита.
+  - Возвращает объект с результатами аудита для дальнейшего анализа.
+*/
+
 export const runAudit = async (url) => {
   const chrome = await chromeLauncher.launch({ chromeFlags: ["--headless"] });
 

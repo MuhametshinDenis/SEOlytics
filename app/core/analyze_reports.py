@@ -1,6 +1,10 @@
 from app.utils.logger.application_logger import ApplicationLogger
 
-
+"""
+Функция анализирует отчет Lighthouse, извлекая данные по каждой категории.
+Для каждой категории рассчитывается средний балл и собираются проблемы, у которых балл меньше или равен 0.8.
+Возвращает словарь с результатами анализа: средний балл по каждой категории и список проблем.
+"""
 def analyze_reports(report):
     log = ApplicationLogger()
     analysis_result = {}

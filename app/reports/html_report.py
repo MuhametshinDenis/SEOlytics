@@ -2,6 +2,13 @@ from pathlib import Path
 
 from app.utils.logger.application_logger import ApplicationLogger
 
+"""
+Функция генерирует HTML отчет на основе данных, предоставленных в объекте 'report'.
+Для каждой секции отчета выводится средний балл, который отображается с соответствующим стилем (в зависимости от значения).
+Если есть проблемы, они выводятся в виде таблицы с идентификатором, названием, баллом, описанием и значением для отображения.
+Если проблем нет, отображается сообщение "No problems found".
+Итоговый HTML сохраняется в файл с именем 'filename' в папке './reports_output'.
+"""
 def generate_html_report(report, filename = 'seolitics_report'):
     log = ApplicationLogger()
     html_parts = []

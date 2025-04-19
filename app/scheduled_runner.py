@@ -9,7 +9,7 @@ from app.reports.html_report import generate_html_report
 from app.reports.xlsx_report import generate_xlsx_report
 from app.utils.logger.application_logger import ApplicationLogger
 
-def run_weekly_report():
+def run_daily_report():
 	config = ApplicationConfig()
 	logger = ApplicationLogger()
 
@@ -66,6 +66,3 @@ def run_weekly_report():
 		generate_html_report(report=result, filename=filename)
 
 	config.save()
-
-if __name__ == '__main__':
-	run_weekly_report()

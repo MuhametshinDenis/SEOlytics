@@ -3,6 +3,14 @@ import xlsxwriter
 from app.utils.logger.application_logger import ApplicationLogger
 
 
+"""
+Функция генерирует отчет в формате Excel (.xlsx) на основе данных из отчета 'report'.
+Для каждой секции создается отдельный лист в Excel-файле, где записываются следующие данные:
+	- averageScore для каждой категории.
+	- Для каждой проблемы в секции записываются данные: ID, Title, Score, Description, DisplayValue.
+Если проблем нет в секции, то только записывается средний балл.
+Файл сохраняется в папке './reports_output' с именем 'filename'.
+"""
 def generate_xlsx_report(report,  filename = 'seolitics_report'):
 	log = ApplicationLogger()
 	workbook = xlsxwriter.Workbook(f'./reports_output/{filename}.xlsx')
