@@ -7,5 +7,7 @@ app/core/__pycache__
 app/reports/__pycache__
 app/utils/logger/__pycache__
 
+reports_output/
+
 package-lock.json
 /node_modules

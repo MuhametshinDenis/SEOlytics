@@ -1,9 +1,6 @@
 colorama==0.4.6
-inquirerpy==0.3.4
-pfzy==0.3.4
-prompt_toolkit==3.0.51
+PyQt5==5.15.11
+PyQt5-Qt5==5.15.2
+PyQt5_sip==12.17.0
 schedule==1.2.2
-termcolor==2.3.0
-wcwidth==0.2.13
 XlsxWriter==3.2.3
-yaspin==3.1.0
